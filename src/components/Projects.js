@@ -1,9 +1,11 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
-import mehulImg from "../assets/img/Mehul.jpeg";
+
+import mehulImg from "../assets/img/mehul sir.webp";
+import sakshiImg from "../assets/img/sakshi.webp";
+import lakshImg from "../assets/img/laksh.webp";
+import ankurImg from "../assets/img/ankur.webp";
+import armaanImg from "../assets/img/arman sir.webp";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -13,17 +15,17 @@ export const Projects = () => {
     {
       title: "Ankur Yadav",
       description: "Mathematics & Computing",
-      imgUrl: projImg1,
+      imgUrl: ankurImg,
     },
     {
       title: "Sakshi Gothwal",
       description: "Computer Science & Engineering ",
-      imgUrl: projImg2,
+      imgUrl: sakshiImg,
     },
     {
       title: "Laksh Bhandari",
       description: "Mathematics & Computing",
-      imgUrl: projImg3,
+      imgUrl: lakshImg,
     },
 
     {
@@ -34,12 +36,12 @@ export const Projects = () => {
     {
       title: "ISTE",
       description: "NIT Hamirpur",
-      imgUrl: projImg1,
+      imgUrl: mehulImg,
     },
     {
       title: "Armaan Shukla",
       description: "Mentor",
-      imgUrl: projImg3,
+      imgUrl: armaanImg,
     },
   ];
 
