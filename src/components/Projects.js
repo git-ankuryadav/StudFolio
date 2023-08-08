@@ -1,11 +1,9 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 
-import mehulImg from "../assets/img/mehul.webp";
 import sakshiImg from "../assets/img/sakshi.webp";
 import lakshImg from "../assets/img/laksh.webp";
 import ankurImg from "../assets/img/ankur.webp";
-import armaanImg from "../assets/img/arman sir.webp";
 
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
@@ -27,18 +25,6 @@ export const Projects = () => {
       title: "Laksh Bhandari",
       description: "Mathematics & Computing",
       imgUrl: lakshImg,
-    },
-
-    {
-      title: "Mehul Aggarwal",
-      description: "Mentor",
-      imgUrl: mehulImg,
-    },
-
-    {
-      title: "Armaan Shukla",
-      description: "Mentor",
-      imgUrl: armaanImg,
     },
   ];
 
