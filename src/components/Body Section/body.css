@@ -1,0 +1,17 @@
+/* body.css */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  width: 82%;
+  height: 100%;
+  padding: 4rem;
+  overflow: auto;
+  margin-right: 100%;
+}
+  
+.bottom {
+    margin-top: 2rem;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  

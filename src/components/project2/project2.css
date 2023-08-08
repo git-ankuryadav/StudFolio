@@ -1,0 +1,76 @@
+:root{
+    --PrimaryColor: #AA367C;
+    --HoverColor: #a52eb0;
+    --palePink: #f8cef4;
+    --whiteColor: #ffffff;
+    --blackCOlor: #2e2e2e;
+    --textColor: #ffffff;
+    --bgColor: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    --greyText: #bebebe;
+    --inputColor: #f8f6f7;
+    --BLueside: #8965bc;
+  
+    /*Font and Typography*/
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 2rem;
+    --normalFontSize: .938rem;
+    --SmallFOntSIze: .813rem;
+    --smallestFontSize: .75rem;
+}
+  
+  .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .addButton {
+    margin-top: 1rem;
+    background-color: var(--PrimaryColor);
+    color: var(--whiteColor);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .addButton:hover {
+    background-color: var(--HoverColor);
+  }
+  
+  .project table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgb(220, 86, 14);
+    border-radius: 0px;
+    overflow: hidden;
+  }
+  
+  .project table tr {
+    border: 1px solid rgb(220, 63, 198);
+    border-radius: 5px;
+  }
+  
+  .project table tr th {
+    padding: 10px 20px;
+    border: 1px solid rgb(220, 63, 198);
+    border-radius: 5px;
+    background-color: var(--palePink);
+    color: var(--HoverColor);
+  }
+  
+  .project table tr td {
+    padding: 10px 20px;
+    border: 1px solid rgb(220, 63, 198);
+    border-radius: 5px;
+    background-color: var(--whiteColor);
+    color: var(--BLueside);
+  }
+  

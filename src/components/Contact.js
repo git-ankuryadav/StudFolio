@@ -13,7 +13,7 @@ export const Contact = () => {
     message: ''
   }
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Send');
+  const [buttonText, setButtonText] = useState('LogIn');
   const [status, setStatus] = useState({});
 
   const onFormUpdate = (category, value) => {
@@ -25,7 +25,7 @@ export const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setButtonText("Sending...");
+    setButtonText("Login...");
     let response = await fetch("http://localhost:5000/contact", {
       method: "POST",
       headers: {
@@ -33,7 +33,7 @@ export const Contact = () => {
       },
       body: JSON.stringify(formDetails),
     });
-    setButtonText("Send");
+    setButtonText("LogIn");
     let result = await response.json();
     setFormDetails(formInitialDetails);
     if (result.code == 200) {
@@ -74,7 +74,6 @@ export const Contact = () => {
                       <input type="tel" value={formDetails.phone} placeholder="Phone No." onChange={(e) => onFormUpdate('phone', e.target.value)}/>
                     </Col>
                     <Col size={12} className="px-1">
-                      <textarea rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
                       <button type="submit"><span>{buttonText}</span></button>
                     </Col>
                     {
