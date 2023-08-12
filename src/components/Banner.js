@@ -4,6 +4,7 @@ import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import { Nav } from "react-bootstrap";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -11,6 +12,10 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
+  const [activeLink, setActiveLink] = useState("#home");
+  const onUpdateActiveLink = (value) => {
+    setActiveLink(value);
+  };
   const toRotate = [
     "Credit Verification",
     "Your Own Portfolio",
@@ -85,8 +90,10 @@ export const Banner = () => {
                     printer took a galley of type and scrambled it to make a
                     type specimen book.
                   </p>
-                  <button onClick={() => console.log("connect")}>
-                    LogIn <ArrowRightCircle size={25} />
+                  <button onClick={() => onUpdateActiveLink("#connect")}>
+                    <Nav.Link href={activeLink} >
+                      LogIn <ArrowRightCircle size={25} />
+                    </Nav.Link>
                   </button>
                 </div>
               )}
