@@ -1,0 +1,98 @@
+:root{
+    --PrimaryColor: #AA367C;
+    --HoverColor: #a52eb0;
+    --palePink: hsl(306, 75%, 89%);
+    --whiteColor: hsl(0, 0, 100);
+    --blackCOlor: hsl(0, 0, 18);
+    --textColor: hsl(0, 0, 100);
+    --bgColor: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: #f8f6f7;
+    --BLueside: ##8965bc;
+  
+    /*Font and Typography*/
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1.12rem;
+    --normalFontSize: .938rem;
+    --SmallFontSIze: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+.sideBar{
+    display: flex;
+    flex-direction: column;
+    background: var(--BLueside);
+    box-shadow: 1px 0px 30px var(--palePink);
+    width: 18%;
+    height: 100%;
+    gap: 3rem;
+    overflow: auto;
+    margin-right: 20px;
+
+    .logoDiv{
+        padding: 1.5rem 1.5 rem 0;
+        cursor: pointer;
+
+        img{
+            max-width: 20px;
+            margin-right: .5rem;
+            background: var(--inputColor);
+            border-radius: 2px;
+            padding: .2rem;
+        }
+
+        h2{
+            font-size: var(--biggestFontSize);
+            color: var(--PrimaryColor);           
+        }       
+    }
+
+    .menuDiv, .settingDiv{
+        .divTitle{
+            font-size: var(--h3FontSize);
+            color: var(--blackCOlor);
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .menuLists{
+           .listItem{
+            padding: .2rem 1.5rem;
+            width: 100%;
+            position: relative;
+
+            &::before{
+                position: absolute;
+                content: '';
+                height: 0;
+                left: 0;
+                width: 5px;
+                bottom: 0;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                background: var(--PrimaryColor);
+            }
+
+            .menuLink{
+                color: var(--);
+                font-weight: 500;
+                .icon{
+                    margin-right: .5rem;
+                }
+            }
+
+            &:hover .menuLink{
+                color: var(--whiteColor);
+                transition: 0;
+            }
+
+            &:hover::before{
+                height: 100%;
+                transition: .3s ease;
+            }
+           } 
+        }
+    }
+
+}
