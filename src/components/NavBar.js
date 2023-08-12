@@ -5,7 +5,15 @@ import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import { HashLink } from "react-router-hash-link";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter , Outlet, Route , Routes} from "react-router-dom";
+import { Link } from "react-router-dom";
+import Home from "../App";
+import Dashboard from "../App2";
+import SideBar from "./SideBar/SideBar";
+import Body from "./Body/Body";
+import Profile from "./Profile/Profile";
+import Project from "./Project/Project";
+import Achievement from "./Achievement/Achievement";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -30,7 +38,21 @@ export const NavBar = () => {
   };
 
   return (
-    <Router>
+    <>
+     {/* <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="Dashboard" element={<Dashboard/>}>
+                  <Route path="SideBar" element={<SideBar/>}>
+                    <Route path="Body" element={<Body/>}/>
+                    <Route path="Profile" element={<Profile/>}/>
+                    <Route path="Project" element={<Project/>}/>
+                    <Route path="Achievement" element={<Achievement/>}/>
+                  </Route>
+                </Route>
+            </Routes>    
+      </BrowserRouter> */}
+    <BrowserRouter>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
@@ -70,6 +92,9 @@ export const NavBar = () => {
               >
                 Team
               </Nav.Link>
+              <Link to="/Dashboard">
+                Dashboard
+              </Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
@@ -92,6 +117,7 @@ export const NavBar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </Router>
+    </BrowserRouter>
+    </>
   );
 };
